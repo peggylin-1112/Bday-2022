@@ -25,6 +25,16 @@
     .nav-link:hover {
         color: white;
     }
+
+    .character-box {
+        border-width: thick;
+        border-style: dashed;
+        border-radius: 5px;
+        border-color: #eae1ef;;
+        box-sizing: border-box;
+        padding: 1%;
+        margin: 0% 1%;
+    }
     </style>
 </head>
 <body>
@@ -90,28 +100,31 @@
             <div class="col-12">
                 <h1 class="text-center">Characters</h1>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-4 main-character">
-                    <img src="./img/1.png" class="img-fluid" alt="">
+            <div class="character-box col-10">
+                <div class="row justify-content-center">
+                    <div class="col-6 main-character">
+                        <img src="./img/1.png" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-4">
+                        <p class="text-center fs-2 font-monospace">角色介紹</p>
+                        <p class="text-left lh-base" style="padding-top: 20%;">本作中的壽星，Psychic from Nijien 5th wave Noctyx
+                            擁有柔軟溫和並性感的嗓音，性格沉靜溫柔的同時也擁有相當反差的一面。 因為有一顆星星落入了眼中，雙眼變成了異色瞳。
+                            跟Noctyx的大家感情很好，總是互相持著彼此。 非常喜歡蛋類料理，甚至曾設想擁有屬於自己的蛋品小農場來追蹤蛋品來源。
+                        </p>
+                    </div>
                 </div>
-                <div class="col-1"></div>
-                <div class="col-4">
-                    <p class="text-center fs-2 font-monospace">角色介紹</p>
-                    <p class="text-left lh-base" style="padding-top: 20%;">本作中的壽星，Psychic from Nijien 5th wave Noctyx
-                        擁有柔軟溫和並性感的嗓音，性格沉靜溫柔的同時也擁有相當反差的一面。 因為有一顆星星落入了眼中，雙眼變成了異色瞳。
-                        跟Noctyx的大家感情很好，總是互相持著彼此。 非常喜歡蛋類料理，甚至曾設想擁有屬於自己的蛋品小農場來追蹤蛋品來源。
-                    </p>
+                <div class="row"></div>
+                <div class="row justify-content-center">
+                <div class="col-8" style="padding: 2%">
+                    <ul class="list-group list-group-horizontal-lg list-group-flush">
+                        <li id="profile-photo-1" class="list-group-item flex-fill"><img src="./img/uki-small.png" alt="" class="img-fluid profile"></li>
+                        <li id="profile-photo-2" class="list-group-item flex-fill"><img src="./img/alban-small.png" alt="" class="img-fluid profile"></li>
+                        <li id="profile-photo-3" class="list-group-item flex-fill"><img src="./img/fulgur-small.png" alt="" class="img-fluid profile"></li>
+                        <li id="profile-photo-4" class="list-group-item flex-fill"><img src="./img/sonny-small.png" alt="" class="img-fluid profile"></li>
+                        <li id="profile-photo-5" class="list-group-item flex-fill"><img src="./img/yugo-small.png" alt="" class="img-fluid profile"></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="row"></div>
-            <div class="col-8" style="padding: 2%">
-                <ul class="list-group list-group-horizontal-lg list-group-flush">
-                    <li id="profile-photo-1" class="list-group-item flex-fill"><img src="./img/uki-small.png" alt="" class="img-fluid profile"></li>
-                    <li id="profile-photo-2" class="list-group-item flex-fill"><img src="./img/alban-small.png" alt="" class="img-fluid profile"></li>
-                    <li id="profile-photo-3" class="list-group-item flex-fill"><img src="./img/fulgur-small.png" alt="" class="img-fluid profile"></li>
-                    <li id="profile-photo-4" class="list-group-item flex-fill"><img src="./img/sonny-small.png" alt="" class="img-fluid profile"></li>
-                    <li id="profile-photo-5" class="list-group-item flex-fill"><img src="./img/yugo-small.png" alt="" class="img-fluid profile"></li>
-                </ul>
+                </div>
             </div>
         </div>
         <div id="section-start" class="section row justify-content-center">
