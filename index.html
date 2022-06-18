@@ -65,6 +65,24 @@
         background-color: transparent;
         cursor: pointer;
     }
+    .top {
+        position: fixed;
+        top: 0;
+        left:16px;
+        text-align: center;
+        display: flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    .top-star {
+        cursor: pointer;
+        margin: -5px 0 0 -1px;
+    }
+    .top-line {
+        background-color: #00eeff;
+        height: 50vh;
+        width: 8px;
+    }
     @media only screen and (max-width: 600px) {
         .main-character {
             height: 250px;
@@ -72,6 +90,12 @@
 
         .main-character img{
             height: 100%;
+        }
+
+        .top-line {
+            background-color: #00eeff;
+            height: 25vh;
+            width: 8px;
         }
     }
     </style>
@@ -83,6 +107,10 @@
                 <img src="./img/main.png" alt="" width="100%" />
             </div>
         </div>
+        <div class="top">
+            <div class="top-line"></div>
+            <div class="top-star" onclick="goTop()"><img src="./img/blue-Star.png"/></div>
+        </div>
         <div id="section-video" class="section row justify-content-center" style="background-image: url('./img/video-bg.png');background-size: 100%;margin: 0 auto;">
             <div class="col-12 section-title">
                 <img src="./img/movie.png" alt="" class="title" />
@@ -92,7 +120,6 @@
                 <iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/pxtGwAtBSjQ?rel=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
             </div>
         </div>
-        <hr class="horizon">
         <div id="section-story" class="section row justify-content-center">
             <div class="col-12 section-title">
                 <img src="./img/story.png" alt="" class="title" />
@@ -106,7 +133,6 @@
                 </p>
             </div>
         </div>
-        <hr class="horizon">
         <div id="section-characters" class="section row justify-content-center">
             <div class="col-12 section-title">
                 <img src="./img/character.png" alt="" class="title" />
@@ -141,13 +167,11 @@
                 </div>
             </div>
         </div>
-        <hr class="horizon">
         <div id="section-start" class="section row justify-content-center">
             <div class="col-12 section-title">
                 <img src="./img/easter-egg.png" alt="" class="title" />
             </div>
         </div>
-        <hr class="horizon">
         <div id="section-staff" class="section row justify-content-center">
             <div class="col-12 section-title"">
                 <img src="./img/staff.png" alt="" class="title" width="50%" />
@@ -207,7 +231,6 @@
             </div>
         </div>
     </div>
-    div.modal
 </body>
 <script>
     function character(index){
@@ -241,6 +264,9 @@
         document.getElementById("character-img").src=data[index].img;
         document.getElementById("character-name").innerHTML=data[index].name;
         document.getElementById("character-intro").innerHTML=data[index].intro;
+    }
+    function goTop(){
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 </script>
 </html>
