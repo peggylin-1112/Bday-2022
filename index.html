@@ -37,30 +37,68 @@
         size: 2px;
         color: #B72281;
     }
+    .section-title {
+        margin-top: -30px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .section-title img {
+        width: 30%;
+    }
+
+    .text-content {
+        color: white;
+    }
+
+    .main-character {
+        height: 500px;
+        background-color: #EBE2EF;
+    }
+
+    .main-character img{
+        height: 100%;
+    }
+    .character-intro {
+        padding-top: 5%
+    }
+    .profile-photo {
+        background-color: transparent;
+        cursor: pointer;
+    }
+    @media only screen and (max-width: 600px) {
+        .main-character {
+            height: 250px;
+        }
+
+        .main-character img{
+            height: 100%;
+        }
+    }
     </style>
 </head>
-<body>
-    <div class="conatiner" style="background-color: white;">
+<body style="background-color: #2a0d58;">
+    <div class="conatiner">
         <div id="section-main" class="section row justify-content-center" style="background-color: white;">
             <div class="col-12">
-                <img src="./img/main.png" alt="" width="100%">
+                <img src="./img/main.png" alt="" width="100%" />
             </div>
         </div>
         <div id="section-video" class="section row justify-content-center" style="background-image: url('./img/video-bg.png');background-size: 100%;margin: 0 auto;">
-            <div class="col-12">
-                <h1 class="text-center" style="color: white;"> Video </h1>
+            <div class="col-12 section-title">
+                <img src="./img/movie.png" alt="" class="title" />
             </div>
             <div class="circle" style="background-color: #eae1ef;"></div>
             <div class="col-8 embed-container" style="overflow: auto;">
                 <iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/pxtGwAtBSjQ?rel=0' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>
             </div>
         </div>
-        <div id="section-story" class="section row justify-content-center" style="background-color: white;">
-            <div class="col-12">
-                <h1 class="text-center"> Story </h1>
+        <hr class="horizon">
+        <div id="section-story" class="section row justify-content-center">
+            <div class="col-12 section-title">
+                <img src="./img/story.png" alt="" class="title" />
             </div>
-            <div class="col-8">
-                <p class="text-left">Noctyx prepared a birthday surprise for Uki!
+            <div class="col-6">
+                <p class="text-left text-content">Noctyx prepared a birthday surprise for Uki!
                 Everyone prepared egg dishes for Uki, and wish him a happy birthday.
                 On that day when everyone showed up with their food, Yugo and Alban wanted Uki to pick up which one is his favourite dish.
                 It became a war between Noctyx!
@@ -70,17 +108,17 @@
         </div>
         <hr class="horizon">
         <div id="section-characters" class="section row justify-content-center">
-            <div class="col-12">
-                <h1 class="text-center">Characters</h1>
+            <div class="col-12 section-title">
+                <img src="./img/character.png" alt="" class="title" />
             </div>
-            <div class="character-box col-10">
+            <div class="character-box col-7">
                 <div class="row justify-content-center">
-                    <div class="col-6 main-character">
-                        <img src="./img/uki.png" class="img-fluid" alt="">
+                    <div class="col-5 main-character">
+                        <img id="character-img" src="./img/uki.png" class="img-fluid" alt="" />
                     </div>
                     <div class="col-4">
-                        <p class="text-center fs-2 font-monospace">角色介紹</p>
-                        <p class="text-left lh-base" style="padding-top: 20%;">Our birthday boy!! Psychic from Nijisanji en 5th wave Noctyx.
+                        <p id="character-name" class="text-center fs-2 font-monospace text-content character-name">Uki Violeta</p>
+                        <p id="character-intro" class="text-left lh-base text-content character-intro">Our birthday boy!! Psychic from Nijisanji en 5th wave Noctyx.
                         Uki has a soft, gentle and sexy voice.
                         He is calm and soft but also has a very different personality.
                         A star fell in his eye which made him become heterochromia.
@@ -93,11 +131,11 @@
                 <div class="row justify-content-center">
                 <div class="col-8" style="padding: 2%">
                     <ul class="list-group list-group-horizontal-lg list-group-flush">
-                        <li id="profile-photo-1" class="list-group-item flex-fill"><img src="./img/uki-small.png" alt="" class="img-fluid profile"></li>
-                        <li id="profile-photo-2" class="list-group-item flex-fill"><img src="./img/alban-small.png" alt="" class="img-fluid profile"></li>
-                        <li id="profile-photo-3" class="list-group-item flex-fill"><img src="./img/fulgur-small.png" alt="" class="img-fluid profile"></li>
-                        <li id="profile-photo-4" class="list-group-item flex-fill"><img src="./img/sonny-small.png" alt="" class="img-fluid profile"></li>
-                        <li id="profile-photo-5" class="list-group-item flex-fill"><img src="./img/yugo-small.png" alt="" class="img-fluid profile"></li>
+                        <li id="profile-photo-1" class="list-group-item flex-fill profile-photo"><img src="./img/uki-small.png" alt="" class="img-fluid profile" onclick="character(0)" /></li>
+                        <li id="profile-photo-2" class="list-group-item flex-fill profile-photo"><img src="./img/alban-small.png" alt="" class="img-fluid profile" onclick="character(1)" /></li>
+                        <li id="profile-photo-3" class="list-group-item flex-fill profile-photo"><img src="./img/fulgur-small.png" alt="" class="img-fluid profile" onclick="character(2)" /></li>
+                        <li id="profile-photo-4" class="list-group-item flex-fill profile-photo"><img src="./img/sonny-small.png" alt="" class="img-fluid profile" onclick="character(3)" /></li>
+                        <li id="profile-photo-5" class="list-group-item flex-fill profile-photo"><img src="./img/yugo-small.png" alt="" class="img-fluid profile" onclick="character(4)" /></li>
                     </ul>
                 </div>
                 </div>
@@ -105,17 +143,14 @@
         </div>
         <hr class="horizon">
         <div id="section-start" class="section row justify-content-center">
-            <div class="col-12">
-                <h1 class="text-center"> Start </h1>
-                <div class="col-4 d-grid gap-2 col-6 mx-auto" style="padding: 5%;">
-                    <button type="button" class="btn btn-outline-success btn-lg">Start</button>
-                </div>
+            <div class="col-12 section-title">
+                <img src="./img/easter-egg.png" alt="" class="title" />
             </div>
         </div>
         <hr class="horizon">
         <div id="section-staff" class="section row justify-content-center">
-            <div class="col-12"">
-                <h1 class="text-center"> Staff </h1>
+            <div class="col-12 section-title"">
+                <img src="./img/staff.png" alt="" class="title" width="50%" />
             </div>
             <div class="card col-6">
                 <div class="card-body">
@@ -172,5 +207,40 @@
             </div>
         </div>
     </div>
+    div.modal
 </body>
+<script>
+    function character(index){
+        var data = [
+            {
+                img: './img/uki.png',
+                name: 'Uki Violeta',
+                intro: 'Disguising as a staff in the convenience store but actually is a phantom thief.He loves all shiny and valuable stuff and can\'t help stealing it once he saw it.He is a heterochromia cat boy, usually a kawaii boy but sometimes shows his paws to you.He is a potential tea kettle just like Fu chan.The most loved person in the world is Sonny Oni.He prepared an omelette for Uki.'
+            },
+            {
+                img: './img/alban.png',
+                name: 'Alban Knox',
+                intro: 'Disguising as a staff in the convenience store but actually is a phantom thief.He loves all shiny and valuable stuff and can\'t help stealing it once he saw it.He is a heterochromia cat boy, usually a kawaii boy but sometimes shows his paws to you.He is a potential tea kettle just like Fu chan.The most loved person in the world is Sonny Oni.He prepared an omelette for Uki.'
+            },
+            {
+                img: './img/fulgur.png',
+                name: 'Fulgur Ovid',
+                intro: 'As known as Fuchan, he is a kind,friendly and talkative person.His tea kettle laugh is a very iconic part of him.As a person who is not good at cooking but a good bartender, Fu chan made a cup of Eggnog for Uki.'
+            },
+            {
+                img: './img/sonny.png',
+                name: 'Sonny Brisko',
+                intro: 'Taichou of VSF, loves negi and sushi so much. He looks like a thoughtful person but actually just a big dog boy.He is very straightforward, sometimes adorable.The most loved person in the world is Alban. He is the only one who can tease Alban. If someone does so, he will take revenge on him/her.He prepared an egg benedict for Uki.'
+            },
+            {
+                img: './img/yugo.png',
+                name: 'Yugo Asuma',
+                intro: 'Having a passion for music, Yugo is a very energetic and enthusiastic person who always makes people ecstatic.Yugo loves Milkshake so much that they are meant for each other.As a Japanese, Yugo prepared Omurice for Uki.'
+            }
+        ];
+        document.getElementById("character-img").src=data[index].img;
+        document.getElementById("character-name").innerHTML=data[index].name;
+        document.getElementById("character-intro").innerHTML=data[index].intro;
+    }
+</script>
 </html>
