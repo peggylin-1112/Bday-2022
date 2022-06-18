@@ -24,11 +24,6 @@
         color: white;
     }
     .character-box {
-        border-width: thick;
-        border-style: dashed;
-        border-radius: 5px;
-        border-color: #eae1ef;;
-        box-sizing: border-box;
         padding: 1%;
         margin: 0% 1%;
     }
@@ -45,18 +40,15 @@
     .section-title img {
         width: 30%;
     }
-
     .text-content {
         color: white;
     }
-
     .main-character {
-        height: 500px;
-        background-color: #EBE2EF;
+        height: 800px;
     }
-
     .main-character img{
         height: 100%;
+        min-width: 200px;
     }
     .character-intro {
         padding-top: 5%
@@ -82,6 +74,9 @@
         background-color: #00eeff;
         height: 50vh;
         width: 8px;
+    }
+    .section {
+        min-height: 500px;
     }
     .flower img {
         width: 100%;
@@ -184,18 +179,8 @@
             </div>
             <div class="character-box col-7">
                 <div class="row justify-content-center">
-                    <div class="col-5 main-character">
-                        <img id="character-img" src="./img/uki.png" class="img-fluid" alt="" />
-                    </div>
-                    <div class="col-4">
-                        <p id="character-name" class="text-center fs-2 font-monospace text-content character-name">Uki Violeta</p>
-                        <p id="character-intro" class="text-left lh-base text-content character-intro">Our birthday boy!! Psychic from Nijisanji en 5th wave Noctyx.
-                        Uki has a soft, gentle and sexy voice.
-                        He is calm and soft but also has a very different personality.
-                        A star fell in his eye which made him become heterochromia.
-                        He has a good relationship with everyone in Noctyx. They always support each other.
-                        As an "eggholic", he likes eggs so much even thought about having an egg farm so that he can track the source of eggs.
-                        </p>
+                    <div class="col-12 main-character">
+                        <img id="character-img" src="./img/uki.png" class="img-fluid" alt=""/>
                     </div>
                 </div>
                 <div class="row"></div>
@@ -270,7 +255,7 @@
                 </div>
             </div>
         </div>
-        <div class="section section-footer row justify-content-center" style="background-color: #403440;" style="height: 5%;">
+        <div class="section-footer row justify-content-center" style="background-color: #403440;" style="height: 5%;">
             <div class="row">
                 <div class="col-12"></div>
             </div>
@@ -279,36 +264,8 @@
 </body>
 <script>
     function character(index){
-        var data = [
-            {
-                img: './img/uki.png',
-                name: 'Uki Violeta',
-                intro: 'Our birthday boy!! Psychic from Nijien 5th wave Noctyx.Uki has a soft, gentle and sexy voice.He is calm and soft but also has a very different personality.A star fell in his eye which made him become heterochromia.He has a good relationship with everyone in Noctyx. They always support each other.As an \"eggholic\", he likes eggs so much even thought about having an egg farm so that he can track the source of eggs.'
-            },
-            {
-                img: './img/alban.png',
-                name: 'Alban Knox',
-                intro: 'Disguising as a staff in the convenience store but actually is a phantom thief.He loves all shiny and valuable stuff and can\'t help stealing it once he saw it.He is a heterochromia cat boy, usually a kawaii boy but sometimes shows his paws to you.He is a potential tea kettle just like Fu chan.The most loved person in the world is Sonny Oni.He prepared an omelette for Uki.'
-            },
-            {
-                img: './img/fulgur.png',
-                name: 'Fulgur Ovid',
-                intro: 'As known as Fuchan, he is a kind,friendly and talkative person.His tea kettle laugh is a very iconic part of him.As a person who is not good at cooking but a good bartender, Fu chan made a cup of Eggnog for Uki.'
-            },
-            {
-                img: './img/sonny.png',
-                name: 'Sonny Brisko',
-                intro: 'Taichou of VSF, loves negi and sushi so much. He looks like a thoughtful person but actually just a big dog boy.He is very straightforward, sometimes adorable.The most loved person in the world is Alban. He is the only one who can tease Alban. If someone does so, he will take revenge on him/her.He prepared an egg benedict for Uki.'
-            },
-            {
-                img: './img/yugo.png',
-                name: 'Yugo Asuma',
-                intro: 'Having a passion for music, Yugo is a very energetic and enthusiastic person who always makes people ecstatic.Yugo loves Milkshake so much that they are meant for each other.As a Japanese, Yugo prepared Omurice for Uki.'
-            }
-        ];
-        document.getElementById("character-img").src=data[index].img;
-        document.getElementById("character-name").innerHTML=data[index].name;
-        document.getElementById("character-intro").innerHTML=data[index].intro;
+        var imgs = ['./img/uki.png', './img/alban.png', './img/fulgur.png', './img/sonny.png', './img/yugo.png'];
+        document.getElementById("character-img").src=imgs[index];
     }
     function goTop(){
         window.scrollTo({ top: 0, behavior: 'smooth' });
