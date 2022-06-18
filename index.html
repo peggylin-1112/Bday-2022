@@ -129,6 +129,21 @@
     .story-modal {
         cursor: pointer;
     }
+    .hover {
+        position: relative;
+    }
+    .hover img {
+        width: 10%;
+        margin: 0px 45%;
+        position:absolute;
+        -webkit-transition: opacity 1s ease-in-out;
+        -moz-transition: opacity 1s ease-in-out;
+        -o-transition: opacity 1s ease-in-out;
+        transition: opacity 1s ease-in-out;
+    }
+    .hover img:nth-of-type(2):hover{
+        opacity:0;
+    }
     @media only screen and (max-width: 600px) {
         .main-character {
             height: 250px;
