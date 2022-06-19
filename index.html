@@ -11,6 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>StarWishU</title>
     <style>.embed-container { position: relative; padding-bottom: 45%; height: 0; overflow: hidden; max-width: 100%; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
@@ -100,16 +102,16 @@
     }
     .story-button-left {
         position: absolute;
-        left: 0;
-        top: 30%;
-        font-size: 60px;
+        left: 5%;
+        top: 84%;
+        font-size: 40px;
         cursor: pointer;
     }
     .story-button-right {
         position: absolute;
-        right: 0;
-        top: 30%;
-        font-size: 60px;
+        right: 5%;
+        top: 84%;
+        font-size: 40px;
         cursor: pointer;
     }
     .story-content {
@@ -333,7 +335,7 @@
                 <img id="story-img" class="story-img" src="./img/easter-egg/ukistory01.jpg" alt="">
                 <div class="row story-content">
                     <div class="col-12 align-self-left">
-                        <p id="story-text" class="story-text">(At home) Uki, who had just finished a birthday party, noticed that stargazers seemed different from the usual.</p>
+                        <p id="story-text" class="story-text"></p>
                         <p class="story-button-left" onclick="storyPrev()"><i class="fa fa-angle-left"></i></p>
                         <p class="story-button-right" onclick="storyNext()"><i class="fa fa-angle-right"></i></p>
                     </div>
@@ -344,9 +346,10 @@
       </div>
 </body>
 <script>
+    // import Typed from 'typed.js';
     function character(index){
         var imgs = ['./img/uki.png', './img/alban.png', './img/fulgur.png', './img/sonny.png', './img/yugo.png'];
-        document.getElementById("character-img").src=imgs[index];
+        $("#character-img").attr("src", imgs[index]);
     }
     function goTop(){
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -383,6 +386,7 @@
             text: 'Our message 2'
         }
     ];
+
     function storyNext() {
         if (storyIndex >= 0 && storyIndex+1 < story.length) {
             storyIndex++;
@@ -396,13 +400,44 @@
         }
     }
     function changeStory(index) {
-        document.getElementById("story-img").src=story[storyIndex].img;
-        document.getElementById("story-text").innerHTML=story[storyIndex].text;
+        $("#story-img").attr("src", story[index].img);
+        $("#story-text").html("");
+        var options = {
+            strings: [story[index].text],
+            typeSpeed: 40,
+            showCursor: false,
+            onBegin: (self) => {
+                $(".story-button-left").hide();
+                $(".story-button-right").hide();
+            },
+            onComplete: (self) => {
+                if (storyIndex == 0) {
+                    $(".story-button-left").hide();
+                } else {
+                    $(".story-button-left").show();
+                }
+
+                if (storyIndex == story.length) {
+                    $(".story-button-right").hide();
+                } else {
+                    $(".story-button-right").show();
+                }
+            }
+        };
+
+        var typed = new Typed('.story-text', options);
     }
+
     const myModalEl = document.getElementById('easter-egg-story')
-    myModalEl.addEventListener('hidden.bs.modal', event => {
+    myModalEl.addEventListener('show.bs.modal', event => {
+        $(".story-button-left").hide();
+        $(".story-button-right").hide();
+    })
+    myModalEl.addEventListener('shown.bs.modal', event => {
         storyIndex = 0;
-        changeStory(storyIndex);
+        if (storyIndex === 0) {
+            changeStory(storyIndex);
+        }
     })
 </script>
 </html>
