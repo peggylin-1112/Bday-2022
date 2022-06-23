@@ -172,6 +172,17 @@
     body {
         background-image: linear-gradient(rgba(18, 21, 64, 1), rgba(162, 81, 154, 1));
     }
+    .upperBackground {
+        background-color: linear-gradient(rgba(18, 21, 64, 1), rgba(162, 81, 154, 1));
+    }
+    .waveBackground {
+        background: url('./img/bg2.png') bottom no-repeat;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+    .bottomBackground {
+        background-color: #c3007c;
+    }
     </style>
 </head>
 <body>
@@ -209,7 +220,7 @@
             </nav>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid upperBackground">
         <div id="section-main" class="section row justify-content-center">
             <div class="col-12">
                 <img src="./img/main.png" alt="" width="100%" />
@@ -272,7 +283,7 @@
                 </div>
             </div>
         </div>
-        <div id="section-start" class="section row justify-content-center">
+        <div id="section-start" class="section row justify-content-center waveBackground">
             <div class="col-12 section-title">
                 <img src="./img/easter-egg.png" alt="" class="title" style="margin-top: 5%;"/>
             </div>
@@ -285,6 +296,8 @@
                 </a>
             </div>
         </div>
+    </div>
+    <div class="container-fluid bottomBackground">
         <div id="section-staff" class="section row justify-content-center">
             <div class="col-12 section-title"">
                 <img src="./img/staff.png" alt="" class="title" width="50%" />
@@ -462,7 +475,7 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
 </body>
 <script>
     // import Typed from 'typed.js';
