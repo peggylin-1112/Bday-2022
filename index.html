@@ -81,9 +81,6 @@
     .section {
         min-height: 500px;
     }
-    .flower {
-        position: relative;
-    }
     .flower-left {
         position: absolute;
         left: -10%;
@@ -230,17 +227,19 @@
             </nav>
         </div>
     </div>
-    <div class="container-fluid upperBackground">
+    <div class="container-fluid overflow-hidden upperBackground">
         <div id="section-main" class="section row justify-content-center">
             <div class="col-md-12">
                 <img src="./img/main.png" alt="" width="100%" />
             </div>
-            <div class="row flower">
-                <div class="flower-left col-md-4">
-                    <img src="./img/flowers2.png" alt=""/>
-                </div>
-                <div class="flower-right col-md-4">
-                    <img src="./img/flowers2.png" alt=""/>
+            <div class="col-md-12">
+                <div class="justify-content-between row">
+                    <div class="col-md-3 position-relative">
+                        <img src="./img/flowers2.png" class="flower-left w-100" alt=""/>
+                    </div>
+                    <div class="col-md-3 position-relative">
+                        <img src="./img/flowers2.png" class="flower-right w-100" alt=""/>
+                    </div>
                 </div>
             </div>
         </div>
