@@ -67,7 +67,11 @@
         min-height: 350px;
     }
     .character-intro {
-        padding-top: 5%
+        border: dashed #EBE2EF;
+        margin-top: 25px;
+        margin-bottom: 1rem;
+        padding: 0 5%;
+        color: #EBE2EF;
     }
     .profile-photo {
         background-color: transparent;
@@ -301,9 +305,14 @@
                 <img src="./img/character.png" alt="" class="title" />
             </div>
             <div class="character-box col-md-7">
-                <div class="row justify-content-center">
-                    <div class="col-md-12 main-character">
+                <div class="row justify-content-center ">
+                    <div class="col-md-12 main-character d-none d-sm-block d-xs-block">
                         <img id="character-img" src="./img/uki.png" class="img-fluid" alt=""/>
+                    </div>
+                    <div class="col-12 d-sm-none">
+                        <img id="character-mobile" src="./img/uki-mobile.png" class="img-fluid" alt=""/>
+                        <!-- <div class="w-100"></div> -->
+                        <p id="character-intro" class="character-intro w-100">Our birthday boy!! Psychic from Nijien 5th wave Noctyx.<br/>Uki has a soft, gentle and sexy voice.<br/>He is calm and soft but also has a very different personality.<br/>A star fell in his eye which made him become heterochromia.<br/>He has a good relationship with everyone in Noctyx. They always support each other.<br/>As an \"eggholic\", he likes eggs so much even thought about having an egg farm so that he can track the source of eggs.<br/></p>
                     </div>
                 </div>
                 <div class="row"></div>
@@ -457,8 +466,36 @@
         }
     });
     function character(index){
-        var imgs = ['./img/uki.png', './img/alban.png', './img/fulgur.png', './img/sonny.png', './img/yugo.png'];
-        $("#character-img").attr("src", imgs[index]);
+        var characters = [
+            {
+                img: './img/uki.png',
+                imgMobile: './img/uki-mobile.png',
+                intro: 'Our birthday boy!! Psychic from Nijien 5th wave Noctyx.<br/>Uki has a soft, gentle and sexy voice.<br/>He is calm and soft but also has a very different personality.<br/>A star fell in his eye which made him become heterochromia.<br/>He has a good relationship with everyone in Noctyx. They always support each other.<br/>As an \"eggholic\", he likes eggs so much even thought about having an egg farm so that he can track the source of eggs.<br/>'
+            },
+            {
+                img:'./img/alban.png',
+                imgMobile: './img/alban-mobile.png',
+                intro: 'Disguising as a staff in the convenience store but actually is a phantom thief.<br/>He loves all shiny and valuable stuff and can\'t help stealing it once he saw it.<br/>He is a heterochromia cat boy, usually a kawaii boy but sometimes shows his paws to you.<br/>He is a potential tea kettle just like Fu chan.<br/>The most loved person in the world is Sonny Oni.<br/>He prepared an omelette for Uki.<br/>'
+            },
+            {
+                img:'./img/fulgur.png',
+                imgMobile: './img/fulgur-mobile.png',
+                intro: 'As known as Fuchan, he is a kind, friendly and talkative person.<br/>His tea kettle laugh is a very iconic part of him.<br/>As a person who is not good at cooking but a good bartender, Fu chan made a cup of Eggnog for Uki.<br/>'
+            },
+            {
+                img:'./img/sonny.png',
+                imgMobile: './img/sonny-mobile.png',
+                intro: 'Taichou of VSF, loves negi and sushi so much. He looks like a thoughtful person but actually just a big dog boy.<br/>He is very straightforward, sometimes adorable.<br/>The most loved person in the world is Alban. He is the only one who can tease Alban. If someone does so, he will take revenge on him/her.<br/>He prepared an egg benedict for Uki.<br/>'
+            },
+            {
+                img:'./img/yugo.png',
+                imgMobile: './img/yugo-mobile.png',
+                intro: 'Having a passion for music, Yugo is a very energetic and enthusiastic person who always makes people ecstatic.<br/>Yugo loves Milkshake so much that they are meant for each other.<br/>As a Japanese, Yugo prepared Omurice for Uki.'
+            }
+        ];
+        $("#character-img").attr("src", characters[index].img);
+        $("#character-mobile").attr("src", characters[index].imgMobile);
+        $("#character-intro").html(characters[index].intro);
     }
     function goTop(){
         window.scrollTo({ top: 0, behavior: 'smooth' });
