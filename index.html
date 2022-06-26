@@ -180,9 +180,14 @@
         }
     }
     body {
-        background-image: linear-gradient(rgba(18, 21, 64, 1), rgba(162, 81, 154, 1));
+        /* background-image: linear-gradient(rgba(18, 21, 64, 1), rgba(162, 81, 154, 1)); */
         font-family: 'Josefin Sans', sans-serif;
         font-family: 'Roboto', sans-serif;
+    }
+    .upperBackground {
+        background-image: url('./img/bgstar.png');
+        /* -moz-background-size: cover;
+        background-size: cover; */
     }
     .waveBackground {
         background: url('./img/bg2.png') bottom no-repeat;
@@ -229,7 +234,7 @@
             </nav>
         </div>
     </div>
-    <div class="container-fluid overflow-hidden">
+    <div class="container-fluid overflow-hidden upperBackground">
         <div id="section-main" class="section row justify-content-center">
             <div class="col-md-12">
                 <img src="./img/main.png" alt="" width="100%" />
