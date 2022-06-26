@@ -73,6 +73,9 @@
         padding: 0 5%;
         color: #EBE2EF;
     }
+    .character-list {
+        margin: 5% auto;
+    }
     .profile-photo {
         background-color: transparent;
         cursor: pointer;
@@ -312,20 +315,15 @@
                     <div class="col-12 d-sm-none">
                         <img id="character-mobile" src="./img/uki-mobile.png" class="img-fluid" alt=""/>
                         <!-- <div class="w-100"></div> -->
-                        <p id="character-intro" class="character-intro w-100">Our birthday boy!! Psychic from Nijien 5th wave Noctyx.<br/>Uki has a soft, gentle and sexy voice.<br/>He is calm and soft but also has a very different personality.<br/>A star fell in his eye which made him become heterochromia.<br/>He has a good relationship with everyone in Noctyx. They always support each other.<br/>As an \"eggholic\", he likes eggs so much even thought about having an egg farm so that he can track the source of eggs.<br/></p>
+                        <p id="character-intro" class="character-intro w-100">Our birthday boy!! Psychic from Nijien 5th wave Noctyx.<br/>Uki has a soft, gentle and sexy voice.<br/>He is calm and soft but also has a very different personality.<br/>A star fell in his eye which made him become heterochromia.<br/>He has a good relationship with everyone in Noctyx. They always support each other.<br/>As an "eggholic", he likes eggs so much even thought about having an egg farm so that he can track the source of eggs.<br/></p>
                     </div>
                 </div>
-                <div class="row"></div>
-                <div class="row justify-content-center">
-                <div class="col-md-8" style="padding: 2%">
-                    <ul class="list-group list-group-horizontal-lg list-group-flush">
-                        <li id="profile-photo-1" class="list-group-item flex-fill profile-photo"><img src="./img/uki-small.png" alt="" class="img-fluid profile" onclick="character(0)" /></li>
-                        <li id="profile-photo-2" class="list-group-item flex-fill profile-photo"><img src="./img/alban-small.png" alt="" class="img-fluid profile" onclick="character(1)" /></li>
-                        <li id="profile-photo-3" class="list-group-item flex-fill profile-photo"><img src="./img/fulgur-small.png" alt="" class="img-fluid profile" onclick="character(2)" /></li>
-                        <li id="profile-photo-4" class="list-group-item flex-fill profile-photo"><img src="./img/sonny-small.png" alt="" class="img-fluid profile" onclick="character(3)" /></li>
-                        <li id="profile-photo-5" class="list-group-item flex-fill profile-photo"><img src="./img/yugo-small.png" alt="" class="img-fluid profile" onclick="character(4)" /></li>
-                    </ul>
-                </div>
+                <div class="character-list row justify-content-center">
+                    <div class="col" id="profile-photo-1"><img src="./img/uki-small.png" alt="" class="img-fluid profile" onclick="character(0)" /></div>
+                    <div class="col" id="profile-photo-2"><img src="./img/alban-small.png" alt="" class="img-fluid profile" onclick="character(1)" /></div>
+                    <div class="col" id="profile-photo-3"><img src="./img/fulgur-small.png" alt="" class="img-fluid profile" onclick="character(2)" /></div>
+                    <div class="col" id="profile-photo-4"><img src="./img/sonny-small.png" alt="" class="img-fluid profile" onclick="character(3)" /></div>
+                    <div class="col" id="profile-photo-5"><img src="./img/yugo-small.png" alt="" class="img-fluid profile" onclick="character(4)" /></div>
                 </div>
             </div>
         </div>
@@ -445,7 +443,6 @@
                 link : "https://twitter.com/"
             }
         ];
-
 
         for (let index = 0; index < staffs.length; index++) {
             $("#section-staff").append(
