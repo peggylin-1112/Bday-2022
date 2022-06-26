@@ -293,7 +293,7 @@
     <div class="container-fluid overflow-hidden upperBackground">
         <div id="section-main" class="section row justify-content-center">
             <div class="col-12">
-                <img id="main-banner" src="./img/main.png" alt="" width="100%" />
+                <img id="main-banner" src="./img/main.png" alt="" width="100%" onload="showLogo();"/>
             </div>
             <div class="w-100"></div>
             <div class="align-self-center col-4 position-relative" >
@@ -415,10 +415,10 @@
     </div>
 </body>
 <script type="text/javascript">
+    function showLogo() {
+        $(".main-logo").show();
+    }
     $(function() {
-        $("#main-banner").on("load", function() {
-            $(".main-logo").show();
-        })
         var staffs = [
             {
                 name : "Ali",
