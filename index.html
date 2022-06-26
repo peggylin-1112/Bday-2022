@@ -365,7 +365,7 @@
             <div class="col-md-12 section-title">
                 <img src="./img/character.png" alt="" class="title" />
             </div>
-            <div class="character-box col-md-7">
+            <div id="character-box" class="character-box col-md-7">
                 <div class="row justify-content-center ">
                     <div class="col-md-12 main-character d-none d-sm-block d-xs-block">
                         <img id="character-img" src="./img/uki.png" class="img-fluid" alt=""/>
@@ -553,6 +553,9 @@
         $("#character-img").attr("src", characters[index].img);
         $("#character-mobile").attr("src", characters[index].imgMobile);
         $("#character-intro").html(characters[index].intro);
+        var position = $('#character-box').offset().top;
+        $(window).scrollTop(position);
+        console.log(position);
     }
     function goTop(){
         window.scrollTo({ top: 0, behavior: 'smooth' });
