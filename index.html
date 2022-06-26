@@ -554,8 +554,7 @@
         $("#character-mobile").attr("src", characters[index].imgMobile);
         $("#character-intro").html(characters[index].intro);
         var position = $('#character-box').offset().top;
-        $(window).scrollTop(position);
-        console.log(position);
+        $(window).scrollTop(position-120);
     }
     function goTop(){
         window.scrollTo({ top: 0, behavior: 'smooth' });
