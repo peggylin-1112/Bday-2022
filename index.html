@@ -168,6 +168,10 @@
     .navbar-brand img{
         width: 100px;
     }
+    .main-logo {
+        margin-top: -100%;
+        width: 100%;
+    }
     @media only screen and (max-width: 600px) {
         .main-character {
             height: 250px;
@@ -239,10 +243,15 @@
     </div>
     <div class="container-fluid overflow-hidden upperBackground">
         <div id="section-main" class="section row justify-content-center">
-            <div class="col-md-12">
+            <div class="col-12">
                 <img src="./img/main.png" alt="" width="100%" />
             </div>
-            <div class="col-md-12">
+            <div class="w-100"></div>
+            <div class="align-self-center col-4 position-relative" >
+                <img class="position-absolute main-logo" src="./img/logo.png" alt=""/>
+            </div>
+            <div class="w-100"></div>
+            <div class="col-12">
                 <div class="justify-content-between row">
                     <div class="col-4 position-relative">
                         <img src="./img/flowers2.png" class="flower-left w-100" alt=""/>
