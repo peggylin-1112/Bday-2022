@@ -277,22 +277,22 @@
                   <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
                     <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-link" href="#section-main">Home</a>
+                        <a class="nav-link" href="javascript:void(0);" onclick="goTop()">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#section-video">Movie</a>
+                        <a class="nav-link" href="javascript:void(0);" onclick="scrollToElement('section-video')">Movie</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#section-story">Story</a>
+                        <a class="nav-link" href="javascript:void(0);" onclick="scrollToElement('section-story')">Story</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#section-characters">Characters</a>
+                        <a class="nav-link" href="javascript:void(0);" onclick="scrollToElement('section-characters')">Characters</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#section-start">Easter Egg</a>
+                        <a class="nav-link" href="javascript:void(0);" onclick="scrollToElement('section-start')">Easter Egg</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#section-staff">Staff</a>
+                        <a class="nav-link" href="javascript:void(0);" onclick="scrollToElement('section-staff')">Staff</a>
                       </li>
                     </ul>
                   </div>
@@ -377,11 +377,11 @@
                     </div>
                 </div>
                 <div class="character-list row justify-content-center">
-                    <div class="col" id="profile-photo-1"><img src="./img/uki-small.png" alt="" class="img-fluid profile" onclick="character(0)" /></div>
-                    <div class="col" id="profile-photo-2"><img src="./img/alban-small.png" alt="" class="img-fluid profile" onclick="character(1)" /></div>
-                    <div class="col" id="profile-photo-3"><img src="./img/fulgur-small.png" alt="" class="img-fluid profile" onclick="character(2)" /></div>
-                    <div class="col" id="profile-photo-4"><img src="./img/sonny-small.png" alt="" class="img-fluid profile" onclick="character(3)" /></div>
-                    <div class="col" id="profile-photo-5"><img src="./img/yugo-small.png" alt="" class="img-fluid profile" onclick="character(4)" /></div>
+                    <div class="col profile-photo" id="profile-photo-1"><img src="./img/uki-small.png" alt="" class="img-fluid profile" onclick="character(0)" /></div>
+                    <div class="col profile-photo" id="profile-photo-2"><img src="./img/alban-small.png" alt="" class="img-fluid profile" onclick="character(1)" /></div>
+                    <div class="col profile-photo" id="profile-photo-3"><img src="./img/fulgur-small.png" alt="" class="img-fluid profile" onclick="character(2)" /></div>
+                    <div class="col profile-photo" id="profile-photo-4"><img src="./img/sonny-small.png" alt="" class="img-fluid profile" onclick="character(3)" /></div>
+                    <div class="col profile-photo" id="profile-photo-5"><img src="./img/yugo-small.png" alt="" class="img-fluid profile" onclick="character(4)" /></div>
                 </div>
             </div>
         </div>
@@ -553,11 +553,15 @@
         $("#character-img").attr("src", characters[index].img);
         $("#character-mobile").attr("src", characters[index].imgMobile);
         $("#character-intro").html(characters[index].intro);
-        var position = $('#character-box').offset().top;
-        $(window).scrollTop(position-120);
+        scrollToElement('character-box');
     }
     function goTop(){
         window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function scrollToElement(elementId) {
+        var position = $("#"+elementId).offset().top;
+        $(window).scrollTop(position-120);
     }
 
     var storyIndex = 0;
