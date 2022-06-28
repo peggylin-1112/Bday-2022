@@ -13,8 +13,8 @@ $(function() {
         {
             name : "Jessie Chen",
             img : "./img/JessieChen.png",
-            accountDisplay: "@",
-            link : "https://twitter.com/"
+            accountDisplay: "@jesssssiechennnnn",
+            link : "https://www.instagram.com/jesssssiechennnnn/"
         },
         {
             name : "Kaoru",
@@ -53,8 +53,8 @@ $(function() {
             link : "https://twitter.com/sandstofu1"
         },
         {
-            name : "呵呵",
-            img : "./img/easter-egg/ukistory05.jpg",
+            name : "CkCk",
+            img : "./img/呵呵.png",
             accountDisplay: "@g35301",
             link : "https://twitter.com/g35301"
         },
@@ -72,7 +72,7 @@ $(function() {
         },
         {
             name : "歐姆蛋",
-            img : "./img/easter-egg/ukistory05.jpg",
+            img : "./img/omelet.png",
             accountDisplay: "@",
             link : "https://twitter.com/"
         }
@@ -95,6 +95,18 @@ $(function() {
         '</div>'
         );
     }
+
+    const myModalEl = document.getElementById('easter-egg-story')
+    myModalEl.addEventListener('show.bs.modal', event => {
+        $(".story-button-left").hide();
+        $(".story-button-right").hide();
+    });
+    myModalEl.addEventListener('shown.bs.modal', event => {
+        storyIndex = 0;
+        if (storyIndex === 0) {
+            changeStory(storyIndex);
+        }
+    });
 });
 function character(index){
     var characters = [
@@ -164,36 +176,59 @@ var story = [
         text: 'Many voices appeared one after another, it seems that there are many more stargazers who have something to say to uki!'
     },
     {
+        name: '村崎海月',
         img : './img/村崎海月.png',
         text: 'Stars are brilliant in the night sky, and you are brilliant in our mind.<br/>Happy birthday to Uki（○人●）♡'
     },
     {
+        name: '碳Tan✧Rin鱗',
         img : './img/tanlin.png',
         text: 'Hope you like these cake and cream I drew for you<3 Happy birthday!Uki<br/>your birthday painter puppy stargazer TANRIN Love you'
     },
     {
+        name: 'とま偷馬',
         img : './img/uktoma.png',
         text: 'Happy Birthday UKI!💜</br>Which dish would you most like to eat?<br/>Wishing you a wonderful and delicious day. '
     },
     {
+        name: 'とま偷馬',
         img : './img/BALA.png',
         text: 'Among the stars, you are the most dazzling one in our eyes.<br/>Happy birthday UKI, we love you.'
     },
     {
+        name: 'Kaoru',
         img : './img/kaoru.png',
         text: 'Happy birthday Uki!! Hope you have a wonderful day. <br/>You\'re the star that fell in my life.<br> I\'m always here. Love you 💜'
     },
     {
+        name: 'Kiwi',
         img : './img/KIWI.png',
         text: 'Happy birthday Uki!🎉 <br/>Thank you for being here, being the one chosen by the stars, you deserve our love💜 💜 💜'
     },
     {
+        name: 'Misty',
         img : './img/Misty.png',
         text: 'Happy Birthday Uki!<br/>You are the star in my life✨<br/>Love you💜💜💜'
     },
     {
+        name: 'Mirum',
         img : './img/Mirum.png',
         text: 'Happy birthday Uki, you\'re my Violeta<3<br/>Thank you for making my day all the time!'
+    },
+    {
+        name: 'Jessie Chen',
+        img : './img/JessieChen.png',
+        text: 'Happy Birthday Uki 🎉🎉🎉 <br>Hope this project makes you happy.<br>You give me more motivation to learn English.<br/>Thanks for your coming!'
+    },
+    {
+        name: 'CkCk',
+        img : './img/呵呵.png',
+        text: 'Happy Birthday UKI!✨ ✨<br/>Hope you like this project!<br/>Wishing you happiness today, tomorrow, and always!💜'
+    },
+    {
+        name: '歐姆蛋',
+        img : './img/omelet.png',
+        text: 'Happy Birthday Uki! Hope you like this project.<br/>Thank you for giving us so many precious memories.<br/>Looking forward to spending more time together ❤'
     }
 ];
 
@@ -237,15 +272,3 @@ function changeStory(index) {
 
     var typed = new Typed('.story-text', options);
 }
-
-const myModalEl = document.getElementById('easter-egg-story')
-myModalEl.addEventListener('show.bs.modal', event => {
-    $(".story-button-left").hide();
-    $(".story-button-right").hide();
-})
-myModalEl.addEventListener('shown.bs.modal', event => {
-    storyIndex = 0;
-    if (storyIndex === 0) {
-        changeStory(storyIndex);
-    }
-})
