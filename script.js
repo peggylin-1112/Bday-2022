@@ -247,6 +247,7 @@ function storyPrev() {
 function changeStory(index) {
     $("#story-img").attr("src", story[index].img);
     $("#story-text").html("");
+    $('#story-text').attr('onclick', '');
     var options = {
         strings: [story[index].text],
         typeSpeed: 40,
@@ -266,6 +267,7 @@ function changeStory(index) {
                 $(".story-button-right").hide();
             } else {
                 $(".story-button-right").show();
+                $('#story-text').attr('onclick', 'storyNext()');
             }
         }
     };
