@@ -7,8 +7,8 @@ $(function() {
         {
             name : "Ali",
             img : "./img/easter-egg/ukistory05.jpg",
-            accountDisplay: "@",
-            link : "https://twitter.com/"
+            accountDisplay: "",
+            link : ""
         },
         {
             name : "Jessie Chen",
@@ -73,17 +73,21 @@ $(function() {
         {
             name : "歐姆蛋",
             img : "./img/omelet.png",
-            accountDisplay: "@",
-            link : "https://twitter.com/"
+            accountDisplay: "",
+            link : ""
         }
     ];
 
     for (let index = 0; index < staffs.length; index++) {
+        var imgLink = '<a href="' + staffs[index].link + '" target="_blank"><img src="' + staffs[index].img + '" class="img-fluid rounded-start" alt=""></a>';
+        if (staffs[index].link === "") {
+            imgLink = '<img src="' + staffs[index].img + '" class="img-fluid rounded-start" alt="">';
+        }
+
         $("#section-staff").append(
         '<div class="card mb-3 staff-card">' +
         '    <div class="row g-0">' +
-        '      <div class="col-md-4 d-flex align-items-center">' +
-        '        <a href="' + staffs[index].link + '" target="_blank"><img src="' + staffs[index].img + '" class="img-fluid rounded-start" alt=""></a>' +
+        '      <div class="col-md-4 d-flex align-items-center">' + imgLink +
         '      </div>' +
         '      <div class="col-md-8">' +
         '       <div class="card-body">' +
