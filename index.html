@@ -257,7 +257,36 @@
         50%  {width: 50%;}
         100% {width: 100%;}
     }
-    @media only screen and (max-width: 768px) {
+
+    @media screen and (max-width: 1200px) {
+        .flower-left {
+            left: -110px;
+            top: -370px;
+        }
+        .flower-right {
+            right: -110px;
+            top: -370px;
+        }
+        .main-logo {
+            top: -150px;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        .flower-left {
+            left: -110px;
+            top: -480px;
+        }
+        .flower-right {
+            right: -110px;
+            top: -480px;
+        }
+        .main-logo {
+            top: -250px;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
         .main-character {
             height: 250px;
         }
@@ -279,25 +308,36 @@
             width: 50%;
         }
         .flower-left {
-            position: absolute;
-            left: -40px;
-            top: -160px;
+            left: -60px;
+            top: -60px;
         }
         .flower-right {
-            position: absolute;
-            right: -40px;
-            top: -160px;
+            right: -60px;
+            top: -60px;
+        }
+        .main-logo {
+            top: -15px;
         }
     }
+
+    @media screen and (max-width: 576px) {
+        .flower-left {
+            left: -50px;
+            top: -50px;
+        }
+        .flower-right {
+            right: -50px;
+            top: -50px;
+        }
+        .main-logo {
+            top: -250px;
+        }
+    }
+
     body {
         background-image: linear-gradient(rgba(18, 21, 64, 1), rgba(162, 81, 154, 1));
         font-family: 'Josefin Sans', sans-serif;
         font-family: 'Roboto', sans-serif;
-    }
-    .upperBackground {
-        /* background-image: url('./img/bgstar.png'); */
-        /* -moz-background-size: cover;
-        background-size: cover; */
     }
     .waveBackground {
         background: url('./img/bg2.png') bottom no-repeat;
