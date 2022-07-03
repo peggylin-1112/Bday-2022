@@ -53,7 +53,6 @@
         color: #B72281;
     }
     .section-title {
-        margin-top: -30px;
         text-align: center;
         padding-bottom: 30px;
     }
@@ -99,7 +98,7 @@
         height: 80vh;
     }
     .section {
-        min-height: 1000px;
+        min-height: 800px;
     }
     .section-staff {
         min-height: 500px;
@@ -280,6 +279,12 @@
         .main-logo {
             top: -150px;
         }
+        .section, .section-staff {
+            min-height: 700px;
+        }
+        .section-title {
+            margin-top: 0px;
+        }
     }
 
     @media screen and (max-width: 992px) {
@@ -293,6 +298,9 @@
         }
         .main-logo {
             top: -250px;
+        }
+        .section, .section-staff {
+            min-height: 500px;
         }
     }
 
@@ -401,11 +409,11 @@
             <div class="col-12">
                 <img id="main-banner" src="./img/main.png" alt="" width="100%" onload="showLogo();"/>
             </div>
-            <div class="w-100"></div>
+            <!-- <div class="w-100"></div> -->
             <div class="align-self-center col-4 position-relative" >
                 <img class="position-absolute main-logo" src="./img/logo.png" alt=""/>
             </div>
-            <div class="w-100"></div>
+            <!-- <div class="w-100"></div> -->
             <div class="col-12">
                 <div class="justify-content-between row">
                     <div class="col-4 position-relative">
