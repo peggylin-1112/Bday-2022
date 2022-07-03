@@ -111,6 +111,7 @@ $(function() {
             changeStory(storyIndex);
         }
     });
+    $(".story-speaker").hide();
 });
 function character(index){
     var characters = [
@@ -195,7 +196,7 @@ var story = [
         text: 'Happy Birthday UKI!💜</br>Which dish would you most like to eat?<br/>Wishing you a wonderful and delicious day. '
     },
     {
-        name: 'とま偷馬',
+        name: '叭啦 bala',
         img : './img/BALA.png',
         text: 'Among the stars, you are the most dazzling one in our eyes.<br/>Happy birthday UKI, we love you.'
     },
@@ -249,7 +250,16 @@ function storyPrev() {
     }
 }
 function changeStory(index) {
+    if (storyIndex == (story.length-1)) {
+
+    }
     $("#story-img").attr("src", story[index].img);
+    if (story[index].name) {
+        $(".story-speaker").show();
+        $("#story-speaker").html(story[index].name);
+    } else {
+        $(".story-speaker").hide();
+    }
     $("#story-text").html("");
     $('#story-text').attr('onclick', '');
     var options = {
@@ -269,6 +279,8 @@ function changeStory(index) {
 
             if (storyIndex == (story.length-1)) {
                 $(".story-button-right").hide();
+                $('#story-text').attr('onclick', '');
+                $('#story-text').attr('data-bs-dismiss', 'modal');
             } else {
                 $(".story-button-right").show();
                 $('#story-text').attr('onclick', 'storyNext()');
