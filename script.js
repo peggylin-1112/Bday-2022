@@ -11,6 +11,12 @@ $(function() {
             link : ""
         },
         {
+            name : "CkCk",
+            img : "./img/呵呵.png",
+            accountDisplay: "@g35301",
+            link : "https://twitter.com/g35301"
+        },
+        {
             name : "Jessie Chen",
             img : "./img/JessieChen.png",
             accountDisplay: "@jesssssiechennnnn",
@@ -35,6 +41,18 @@ $(function() {
             link : "https://twitter.com/2mirum2"
         },
         {
+            name : "Misty",
+            img : "./img/Misty.png",
+            accountDisplay: "@qwqouo",
+            link : "https://twitter.com/qwqouo"
+        },
+        {
+            name : "とま偷馬",
+            img : "./img/uktoma.png",
+            accountDisplay: "@sandstofu1",
+            link : "https://twitter.com/sandstofu1"
+        },
+        {
             name : "叭啦 bala",
             img : "./img/BALA.png",
             accountDisplay: "@a9630112",
@@ -47,28 +65,10 @@ $(function() {
             link : "https://twitter.com/tanlinGM"
         },
         {
-            name : "とま偷馬",
-            img : "./img/uktoma.png",
-            accountDisplay: "@sandstofu1",
-            link : "https://twitter.com/sandstofu1"
-        },
-        {
-            name : "CkCk",
-            img : "./img/呵呵.png",
-            accountDisplay: "@g35301",
-            link : "https://twitter.com/g35301"
-        },
-        {
             name : "村崎海月",
             img : "./img/村崎海月.png",
             accountDisplay: "@kaigetsu2434",
             link : "https://twitter.com/kaigetsu2434"
-        },
-        {
-            name : "Misty",
-            img : "./img/Misty.png",
-            accountDisplay: "@qwqouo",
-            link : "https://twitter.com/qwqouo"
         },
         {
             name : "歐姆蛋",
