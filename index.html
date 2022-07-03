@@ -122,15 +122,15 @@
     }
     .story-button-left {
         position: absolute;
-        left: 7%;
-        top: 84%;
+        left: 4%;
+        top: 70%;
         font-size: 40px;
         cursor: pointer;
     }
     .story-button-right {
         position: absolute;
-        right: 5%;
-        top: 84%;
+        right: 2%;
+        top: 70%;
         font-size: 40px;
         width: 10%;
         cursor: pointer;
@@ -150,9 +150,11 @@
         width: 100%;
     }
     .story-text{
-        padding: 10% 5%;
+        padding: 60px 21px;
         font-size: 20px;
         color: white;
+        height: 270px;
+        overflow-y: auto;
     }
     .story-modal {
         cursor: pointer;
@@ -225,6 +227,21 @@
         right: -45%;
         bottom: -100px;
         transform: rotate(10deg);
+    }
+    .story-speaker {
+        background-image: url(img/character-name.png);
+        color: white;
+        top: -5px;
+        left: 25px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: max-content;
+    }
+    .story-speaker p {
+        margin: 0;
+        text-align: center;
+        padding: 20px 20px;
     }
     @keyframes showUp
     {
@@ -444,8 +461,8 @@
                 <div class="row">
 
                 </div>
-                <div class="row story-content">
-                    <div class="col-4" class="story-speaker"><p id="story-speaker" class="story-speaker small">Jessie Chen</p></div>
+                <div class="row story-content position-relative">
+                    <div class="col-4 story-speaker position-absolute"><p id="story-speaker" class="small">Jessie Chen</p></div>
                     <div class="col-12 align-self-left">
                         <p id="story-text" class="story-text" onclick="storyNext()"></p>
                         <p class="story-button-left" onclick="storyPrev()"><span class="material-symbols-outlined">arrow_back_ios_new</span></p>
