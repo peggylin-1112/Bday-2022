@@ -236,12 +236,22 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        width: max-content;
     }
     .story-speaker p {
         margin: 0;
         text-align: center;
         padding: 20px 20px;
+    }
+    .star-bg {
+        height: 0px;
+        top: 100px;
+        z-index: -1;
+    }
+    .star-small {
+        width: 50px;
+    }
+    .star-big {
+        width: 150px;
     }
     @keyframes showUp
     {
@@ -386,8 +396,8 @@
             </nav>
         </div>
     </div>
-    <div class="container-fluid position-relative" style="overflow-x:hidden">
-        <div id="section-main" class="section row justify-content-center">
+    <div class="container-fluid position-relative">
+        <div id="section-main" class="section row justify-content-center" style="overflow-x: hidden;">
             <div class="col-12">
                 <img id="main-banner" src="./img/main.png" alt="" width="100%" onload="showLogo();"/>
             </div>
@@ -406,6 +416,16 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="star-bg position-sticky">
+            <img class="star-small position-absolute" src="./img/deco-star1.png" alt=""/>
+            <img class="star-big position-absolute" src="./img/deco-star2.png" alt=""/>
+            <img class="star-small position-absolute" src="./img/deco-star3.png" alt=""/>
+            <img class="star-small position-absolute" src="./img/deco-star4.png" alt=""/>
+            <img class="star-small position-absolute" src="./img/deco-star4.png" alt=""/>
+            <img class="star-big position-absolute" src="./img/deco-star1.png" alt=""/>
+            <img class="star-big position-absolute" src="./img/deco-star3.png" alt=""/>
+            <img class="star-big position-absolute" src="./img/deco-star2.png" alt=""/>
         </div>
         <div class="top">
             <div class="top-star" onclick="goTop()"><img src="./img/top.png"/></div>

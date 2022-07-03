@@ -112,6 +112,7 @@ $(function() {
         }
     });
     $(".story-speaker").hide();
+    starBg();
 });
 function character(index){
     var characters = [
@@ -289,4 +290,27 @@ function changeStory(index) {
     };
 
     var typed = new Typed('.story-text', options);
+}
+function starBg() {
+    var tops = [100, 100, 225, 285, 350, 375, 520, 525 ];
+    var xPosition = [50, 100, 190, 175, 75, 50, 90, 155 ];
+    $(".star-bg img").each(function (index) {
+        if (index % 2 == 0) {
+            $(this).css(
+                {
+                    "top" : tops[index],
+                    "left" : xPosition[index]
+                }
+            );
+        } else {
+            $(this).css(
+                {
+                    "top" : tops[index],
+                    "right" : xPosition[index]
+                }
+            );
+        }
+
+        console.log($(this).attr("src"));
+    });
 }
