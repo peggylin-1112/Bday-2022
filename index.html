@@ -193,8 +193,11 @@
         width: 200px;
     }
     .main-logo {
-        margin-top: -85%;
+        margin-top: -65%;
         width: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
         display: none;
         animation: showUp 3s;
         -webkit-animation: showUp 3s;
@@ -222,6 +225,20 @@
         right: -45%;
         bottom: -100px;
         transform: rotate(10deg);
+    }
+    @keyframes showUp
+    {
+        0%   {width: 0%;}
+        25%  {width: 25%;}
+        50%  {width: 50%;}
+        100% {width: 100%;}
+    }
+    @-webkit-keyframes showUp
+    {
+        0%   {width: 0%;}
+        25%  {width: 25%;}
+        50%  {width: 50%;}
+        100% {width: 100%;}
     }
     @media only screen and (max-width: 768px) {
         .main-character {
