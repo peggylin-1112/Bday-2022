@@ -124,7 +124,7 @@ function character(index){
         {
             img:'./img/alban.png',
             imgMobile: './img/alban-mobile.png',
-            intro: 'Disguising as a staff in the convenience store but actually is a phantom thief.<br/>He loves all shiny and valuable stuff and can\'t help stealing it once he saw it.<br/>He is a heterochromia cat boy, usually a kawaii boy but sometimes shows his paws to you.<br/>He is a potential tea kettle just like Fu chan.<br/>The most loved person in the world is Sonny Oni.<br/>He prepared an omelette for Uki.<br/>'
+            intro: 'Disguising as a staff in the convenience store but actually is a phantom thief.<br/>He loves all shiny and valuable stuff and can\'t help stealing it once he saw it.<br/>He is a heterochromia cat boy, usually a kawaii boy but sometimes shows his paws to you.<br/>He is a potential tea kettle just like Fu chan.<br/>The most loved person in the world is Sonny Oni.<br/>He prepared an scotch egg for Uki.<br/>'
         },
         {
             img:'./img/fulgur.png',
