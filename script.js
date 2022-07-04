@@ -310,7 +310,5 @@ function starBg() {
                 }
             );
         }
-
-        console.log($(this).attr("src"));
     });
 }
