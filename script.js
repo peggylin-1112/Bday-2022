@@ -6,73 +6,73 @@ $(function() {
     var staffs = [
         {
             name : "Ali",
-            img : "./img/easter-egg/ukistory05.jpg",
+            img : "./img/staff/ali.png",
             accountDisplay: "",
             link : ""
         },
         {
             name : "CkCk",
-            img : "./img/呵呵.png",
+            img : "./img/staff/呵呵.png",
             accountDisplay: "@g35301",
             link : "https://twitter.com/g35301"
         },
         {
             name : "Jessie Chen",
-            img : "./img/JessieChen.png",
+            img : "./img/staff/JessieChen.png",
             accountDisplay: "@jesssssiechennnnn",
             link : "https://www.instagram.com/jesssssiechennnnn/"
         },
         {
             name : "Kaoru",
-            img : "./img/kaoru.png",
+            img : "./img/staff/kaoru.png",
             accountDisplay: "@star07160721",
             link : "https://twitter.com/star07160721"
         },
         {
             name : "Kiwi",
-            img : "./img/KIWI.png",
+            img : "./img/staff/KIWI.png",
             accountDisplay: "@jellyfishsUki",
             link : "https://twitter.com/jellyfishsUki"
         },
         {
             name : "Mirum",
-            img : "./img/Mirum.png",
+            img : "./img/staff/Mirum.png",
             accountDisplay: "@2mirum2",
             link : "https://twitter.com/2mirum2"
         },
         {
             name : "Misty",
-            img : "./img/Misty.png",
+            img : "./img/staff/Misty.png",
             accountDisplay: "@qwqouo",
             link : "https://twitter.com/qwqouo"
         },
         {
             name : "とま偷馬",
-            img : "./img/uktoma.png",
+            img : "./img/staff/uktoma.png",
             accountDisplay: "@sandstofu1",
             link : "https://twitter.com/sandstofu1"
         },
         {
             name : "叭啦 bala",
-            img : "./img/BALA.png",
+            img : "./img/staff/BALA.png",
             accountDisplay: "@a9630112",
             link : "https://twitter.com/a9630112"
         },
         {
             name : "碳Tan✧Rin鱗",
-            img : "./img/tanlin.png",
+            img : "./img/staff/tanlin.png",
             accountDisplay: "@tanlinGM",
             link : "https://twitter.com/tanlinGM"
         },
         {
             name : "村崎海月",
-            img : "./img/村崎海月.png",
+            img : "./img/staff/村崎海月.png",
             accountDisplay: "@kaigetsu2434",
             link : "https://twitter.com/kaigetsu2434"
         },
         {
             name : "歐姆蛋",
-            img : "./img/omelet.png",
+            img : "./img/staff/omelet.png",
             accountDisplay: "",
             link : ""
         }
@@ -178,62 +178,62 @@ var story = [
         text: 'Uki found that he could hear stargazers\' talking.'
     },
     {
-        img : './img/easter-egg/ukistory05.jpg',
+        img : './img/easter-egg/ukistory05.jpeg',
         text: 'Many voices appeared one after another, it seems that there are many more stargazers who have something to say to uki!'
     },
     {
         name: '村崎海月',
-        img : './img/村崎海月.png',
+        img : './img/staff/村崎海月.png',
         text: 'Stars are brilliant in the night sky, and you are brilliant in our mind.<br/>Happy birthday to Uki（○人●）♡'
     },
     {
         name: '碳Tan✧Rin鱗',
-        img : './img/tanlin.png',
+        img : './img/staff/tanlin.png',
         text: 'Hope you like these cake and cream I drew for you<3 Happy birthday!Uki<br/>your birthday painter puppy stargazer TANRIN Love you'
     },
     {
         name: 'とま偷馬',
-        img : './img/uktoma.png',
+        img : './img/staff/uktoma.png',
         text: 'Happy Birthday UKI!💜</br>Which dish would you most like to eat?<br/>Wishing you a wonderful and delicious day. '
     },
     {
         name: '叭啦 bala',
-        img : './img/BALA.png',
+        img : './img/staff/BALA.png',
         text: 'Among the stars, you are the most dazzling one in our eyes.<br/>Happy birthday UKI, we love you.'
     },
     {
         name: 'Kaoru',
-        img : './img/kaoru.png',
+        img : './img/staff/kaoru.png',
         text: 'Happy birthday Uki!! Hope you have a wonderful day. <br/>You\'re the star that fell in my life.<br> I\'m always here. Love you 💜'
     },
     {
         name: 'Kiwi',
-        img : './img/KIWI.png',
+        img : './img/staff/KIWI.png',
         text: 'Happy birthday Uki!🎉 <br/>Thank you for being here, being the one chosen by the stars, you deserve our love💜 💜 💜'
     },
     {
         name: 'Misty',
-        img : './img/Misty.png',
+        img : './img/staff/Misty.png',
         text: 'Happy Birthday Uki!<br/>You are the star in my life✨<br/>Love you💜💜💜'
     },
     {
         name: 'Mirum',
-        img : './img/Mirum.png',
+        img : './img/staff/Mirum.png',
         text: 'Happy birthday Uki, you\'re my Violeta<3<br/>Thank you for making my day all the time!'
     },
     {
         name: 'Jessie Chen',
-        img : './img/JessieChen.png',
+        img : './img/staff/JessieChen.png',
         text: 'Happy Birthday Uki 🎉🎉🎉 <br>Hope this project makes you happy.<br>You give me more motivation to learn English.<br/>Thanks for your coming!'
     },
     {
         name: 'CkCk',
-        img : './img/呵呵.png',
+        img : './img/staff/呵呵.png',
         text: 'Happy Birthday UKI!✨ ✨<br/>Hope you like this project!<br/>Wishing you happiness today, tomorrow, and always!💜'
     },
     {
         name: '歐姆蛋',
-        img : './img/omelet.png',
+        img : './img/staff/omelet.png',
         text: 'Happy Birthday Uki! Hope you like this project.<br/>Thank you for giving us so many precious memories.<br/>Looking forward to spending more time together ❤'
     }
 ];
