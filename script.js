@@ -55,8 +55,8 @@ $(function() {
         {
             name : "叭啦 bala",
             img : "./img/staff/BALA.png",
-            accountDisplay: "@a9630112",
-            link : "https://twitter.com/a9630112"
+            accountDisplay: "@guk_52",
+            link : "https://twitter.com/guk_52"
         },
         {
             name : "碳Tan✧Rin鱗",
@@ -73,8 +73,8 @@ $(function() {
         {
             name : "歐姆蛋",
             img : "./img/staff/omelet.png",
-            accountDisplay: "",
-            link : ""
+            accountDisplay: "@wonderfishing",
+            link : "https://twitter.com/wonderfishing"
         }
     ];
 
